@@ -1,4 +1,4 @@
-import UnderlineLink from '@/components/mollecules/UnderlineLink'
+import UnderlineLink from '@/components/molecules/UnderlineLink'
 import Layout from '@/components/template/Layout'
 
 import { twclsx } from '@/libs/twclsx'

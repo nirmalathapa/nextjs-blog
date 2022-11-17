@@ -1,10 +1,9 @@
-import UnstyledLink from '@/components/atoms/UnstyledLink'
-
 import { APP_ROUTE } from '@/constant/route'
 import { useDrawer } from '@/hooks'
 import { twclsx } from '@/libs/twclsx'
 
 import { Variants, m } from 'framer-motion'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 const container: Variants = {
@@ -44,7 +43,7 @@ const Drawer = () => {
         <m.ul variants={container} initial='hidden' animate='visible'>
           {APP_ROUTE.map((prop, id) => (
             <m.li key={id} variants={item}>
-              <UnstyledLink
+              <Link
                 key={id}
                 href={prop.href}
                 onClick={changeState}
@@ -57,7 +56,7 @@ const Drawer = () => {
                 )}
               >
                 {prop.children}
-              </UnstyledLink>
+              </Link>
             </m.li>
           ))}
         </m.ul>

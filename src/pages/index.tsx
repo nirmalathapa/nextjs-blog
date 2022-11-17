@@ -1,4 +1,3 @@
-import UnstyledLink from '@/components/atoms/UnstyledLink'
 import BlogList from '@/components/organism/BlogList'
 import HeroWithPhoto from '@/components/template/HeroWithPhoto'
 import Layout from '@/components/template/Layout'
@@ -9,6 +8,7 @@ import { twclsx } from '@/libs/twclsx'
 import { ArrowSmRightIcon } from '@heroicons/react/outline'
 import type { GetStaticProps, NextPage } from 'next'
 import { Blog } from 'next-starter-blog'
+import Link from 'next/link'
 
 interface HomeProps {
   blogs: Array<Blog>
@@ -41,7 +41,7 @@ const Home: NextPage<HomeProps> = ({ blogs = [] }) => {
       </HeroWithPhoto>
 
       <BlogList blogs={blogs} title='Featured Post'>
-        <UnstyledLink
+        <Link
           href='/blog'
           className={twclsx(
             'group',
@@ -57,7 +57,7 @@ const Home: NextPage<HomeProps> = ({ blogs = [] }) => {
               'opacity-0 group-hover:opacity-100'
             )}
           />
-        </UnstyledLink>
+        </Link>
       </BlogList>
     </Layout>
   )

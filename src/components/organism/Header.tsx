@@ -1,6 +1,6 @@
-import DarkMode from '@/components/mollecules/DarkMode'
-import DrawerToggler from '@/components/mollecules/DrawerToggler'
-import Nav from '@/components/mollecules/Nav'
+import DarkMode from '@/components/molecules/DarkMode'
+import DrawerToggler from '@/components/molecules/DrawerToggler'
+import Nav from '@/components/molecules/Nav'
 
 import { twclsx } from '@/libs/twclsx'
 

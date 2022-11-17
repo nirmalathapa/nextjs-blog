@@ -1,4 +1,4 @@
-import BlogCard from '@/components/mollecules/BlogCard'
+import BlogCard from '@/components/molecules/BlogCard'
 import Hero from '@/components/template/Hero'
 import Layout from '@/components/template/Layout'
 

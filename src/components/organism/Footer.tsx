@@ -1,4 +1,4 @@
-import FooterLinks from '@/components/mollecules/FooterLinks'
+import FooterLinks from '@/components/molecules/FooterLinks'
 
 import { APP_ROUTE } from '@/constant/route'
 import { socialMedia } from '@/constant/socialMedia'

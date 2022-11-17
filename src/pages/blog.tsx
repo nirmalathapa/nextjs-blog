@@ -1,4 +1,4 @@
-import Searchbar from '@/components/mollecules/Searchbar'
+import Searchbar from '@/components/molecules/Searchbar'
 import BlogList from '@/components/organism/BlogList'
 import Hero from '@/components/template/Hero'
 import Layout from '@/components/template/Layout'

@@ -1,4 +1,4 @@
-import CustomImage from '@/components/mollecules/CustomImage'
+import CustomImage from '@/components/molecules/CustomImage'
 
 import { twclsx } from '@/libs/twclsx'
 
