@@ -1,7 +1,7 @@
 import Blockquote from '@/components/contents/Blockquote'
 import InlineCode from '@/components/contents/InlineCode'
 import Pre from '@/components/contents/Pre'
-import UnderlineLink from '@/components/mollecules/UnderlineLink'
+import UnderlineLink from '@/components/molecules/UnderlineLink'
 
 import { MDXRemoteProps } from 'next-mdx-remote'
 

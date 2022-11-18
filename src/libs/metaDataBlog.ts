@@ -22,17 +22,9 @@ export const generateMetaDataBlog = (data: MetaData): CustomSeoProps => {
     description: data.summary,
     canonical: siteURL + data.slug,
     openGraph: {
-      article: { authors: [data.author_name], publishedTime: ISODate, tags: data.tags },
+      //article: { authors: [data.author_name], publishedTime: ISODate, tags: data.tags },
       type: 'blog',
-      images: [
-        {
-          // TODDO: update your default thumbnail at public/static/
-          url: data.thumbnail ?? '/static/default-thumbnail.jpg',
-          alt: data.title,
-          width: 1200,
-          height: 600
-        }
-      ],
+
       url: siteURL + data.slug
     },
     twitter: {

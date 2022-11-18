@@ -15,7 +15,7 @@ const FooterLinks: React.FunctionComponent<FooterLinkProps> = ({ data }) => {
         <Link
           className={twclsx(
             'max-w-max transition text-sm md:text-base',
-            'hover:text-primary-4 dark:hover:text-primary-2'
+            'hover:text-primary-4 hover:underline dark:hover:text-primary-2'
           )}
           key={val.href}
           href={val.href}

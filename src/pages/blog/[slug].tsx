@@ -1,5 +1,4 @@
 import MDXComponents from '@/components/contents'
-import CustomImage from '@/components/mollecules/CustomImage'
 import Layout from '@/components/template/Layout'
 
 import { getBlog, getBlogBySlug } from '@/helpers'
@@ -25,12 +24,12 @@ interface BlogPostProps {
 
 const BlogPost: NextPage<BlogPostProps> = ({ data, mdxSource }) => {
   const metaData = useMetaData(data)
-  const isMediumScreen = useMediaQuery('(min-width: 768px)')
+  //const isMediumScreen = useMediaQuery('(min-width: 768px)')
 
   return (
     <Layout {...metaData} as='main' title={data.title} description={data.summary}>
       <article>
-        <figure className='w-full pt-0'>
+        {/* <figure className='w-full pt-0'>
           <CustomImage
             src={data.thumbnail ?? '/static/default-thumbnail.jpg'}
             alt={data.title}
@@ -40,20 +39,20 @@ const BlogPost: NextPage<BlogPostProps> = ({ data, mdxSource }) => {
             objectFit='cover'
             className='rounded'
           />
-        </figure>
+        </figure> */}
         <section className='border-b border-main-2 dark:border-main-3 py-10'>
           <h1 className='mb-8 md:text-5xl'>{data.title}</h1>
           <div className='flex items-center gap-4'>
-            <CustomImage
+            {/* <CustomImage
               display='intrinsic'
               width={32}
               height={32}
               src={data.author_image ?? '/static/avatar.jpg'}
               alt={data.author_name}
               className='rounded-full'
-            />
+            /> */}
             <p className='text-sm md:text-base'>
-              Written by {data.author_name} /{' '}
+              {/* Written by {data.author_name} /{' '} */}
               <time dateTime={dateStringToISO(data.published)}>{dateFormat(data.published)}</time>
             </p>
           </div>
@@ -61,7 +60,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ data, mdxSource }) => {
 
         <section
           className={twclsx(
-            'prose md:prose-lg dark:prose-invert py-20',
+            'prose md:prose-lg dark:prose-invert py-16',
             'prose-a:no-underline prose-a:font-semibold prose-a:text-primary-4'
           )}
         >

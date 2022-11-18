@@ -8,7 +8,7 @@ export interface HeroProps {
 
 const Hero: React.FunctionComponent<HeroProps> = ({ title, description, children }) => {
   return (
-    <section className={twclsx('pb-20 pt-10')}>
+    <section className={twclsx('pb-0 pt-12')}>
       <h1 className={twclsx('text-4xl md:text-5xl')}>{title}</h1>
       <p className={twclsx('max-w-prose')}>{description}</p>
       {children}

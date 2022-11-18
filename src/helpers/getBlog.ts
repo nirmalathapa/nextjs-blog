@@ -47,7 +47,6 @@ const getBlog = async () => {
     const file = await fs.readFile(PATH_DIR, 'utf8')
 
     const { data, content } = matter(file)
-
     return {
       data: data as Blog,
       slug: p.replace('.mdx', ''),

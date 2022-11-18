@@ -2,7 +2,7 @@ import CustomSeo, { CustomSeoProps } from '@/components/atoms/CustomSeo'
 
 import React from 'react'
 
-interface LayoutProps extends CustomSeoProps {
+interface LayoutProps {
   title: string
   description: string
   children: React.ReactNode
@@ -18,7 +18,12 @@ interface LayoutProps extends CustomSeoProps {
  * with a CustomSeo component and the children prop.
  */
 const Layout: React.FunctionComponent<LayoutProps> = ({ children, as = 'div', ...props }) => {
-  return React.createElement(as, { className: 'layout mt-20' }, <CustomSeo {...props} />, children)
+  return React.createElement(
+    as,
+    { className: 'layout mt-16' },
+    <CustomSeo {...(props as unknown as CustomSeoProps)} />,
+    children
+  )
 }
 
 export default Layout

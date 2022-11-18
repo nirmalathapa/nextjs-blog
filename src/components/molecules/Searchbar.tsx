@@ -12,7 +12,7 @@ const Searchbar: React.FunctionComponent<SearchbarProps> = ({ placeholder, ...pr
   return (
     <div
       className={twclsx(
-        'flex items-center mb-20',
+        'flex items-center mb-12',
         'w-full h-12 rounded-lg focus-within:ring',
         'border border-main-2 dark:border-main-3',
         'bg-transparent transition-all',

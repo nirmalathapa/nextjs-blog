@@ -1,5 +1,4 @@
-import CustomImage from '@/components/mollecules/CustomImage'
-
+//import CustomImage from '@/components/molecules/CustomImage'
 import { twclsx } from '@/libs/twclsx'
 
 export interface HeroProps {
@@ -12,20 +11,20 @@ export interface HeroProps {
 
 const HeroWithPhoto: React.FunctionComponent<HeroProps> = (props) => {
   return (
-    <section className={twclsx('pb-20 pt-10')}>
+    <section className={twclsx('pb-16 pt-12')}>
       <div
         className={twclsx(
           'flex flex-col-reverse',
-          'gap-4 mb-4 md:gap-0',
+          'gap-4 mb-12 md:gap-0',
           'md:flex-row md:items-center md:justify-between'
         )}
       >
         <h1 className={twclsx('text-4xl md:text-5xl')}>{props.title}</h1>
-        <figure className={twclsx('relative', 'w-20 h-20 md:w-24 md:h-24')}>
-          <CustomImage src={props.image} className={twclsx('rounded-3xl')} alt={props.imageAlt} display='responsive' />
-        </figure>
+        {/* <figure className={twclsx('relative', 'w-20 h-20 md:w-24 md:h-28')}>
+          <CustomImage src={props.image} className={twclsx('rounded-3xl')} alt={props.imageAlt} display='intrinsic' />
+        </figure> */}
       </div>
-      <p className={twclsx('max-w-prose')}>{props.description}</p>
+      <p className={twclsx('max-w-prose font-medium')}>{props.description}</p>
       {props.children}
     </section>
   )
