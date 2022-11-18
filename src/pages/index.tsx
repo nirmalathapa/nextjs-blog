@@ -18,7 +18,9 @@ const Home: NextPage<HomeProps> = ({ blogs = [] }) => {
   const meta = {
     title: ownerName,
     template: 'Personal Blog',
-    description: `I'm ${ownerName}, a software engineer in one of the biggest tech industry in the world, I personally writing mostly about web development and tech careers.`,
+    description: `Hello I'm ${
+      ownerName.split(' ')[0]
+    }, UX'er partly & a Developer. I am passionate about creating meaningful and inclusive digital products. Currently, working as a Creative Technologist at Nordea. Orginally from Nepal however Copenhagen is my home now 😊`,
     openGraph: {
       images: [
         {
@@ -34,19 +36,21 @@ const Home: NextPage<HomeProps> = ({ blogs = [] }) => {
   return (
     <Layout as='main' {...meta}>
       <HeroWithPhoto image='/static/avatar.jpg' imageAlt={ownerName} {...meta}>
-        <p className={twclsx('max-w-prose mt-2')}>
-          If you want to get in touch with me, please catch me on one of my social media, I&apos;m always open when
-          I&apos;m out of my office.
+        <br />
+        <p className={twclsx('max-w-prose mt-2 font-medium')}>
+          I like reading in general anything that spikes my interest. Mostly, about technologies, science, philosphy,
+          psychology, history, arts and all about the universe. And I like to question everything. However, this is a
+          blog about my learnings especially with UX design and coding.
         </p>
       </HeroWithPhoto>
 
-      <BlogList blogs={blogs} title='Featured Post'>
+      <BlogList blogs={blogs} title='Blog Post'>
         <Link
           href='/blog'
           className={twclsx(
             'group',
             'items-center space-x-1 font-medium',
-            'hover:text-primary-3 dark:hover:text-primary-2'
+            'hover:text-primary-4 dark:hover:text-primary-2 hover:underline'
           )}
         >
           <span>See all post</span>

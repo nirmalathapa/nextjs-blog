@@ -15,10 +15,10 @@ const Nav = () => {
             key={id}
             href={item.href}
             className={twclsx(
-              'px-1.5 py-0.5 transition font-semibold bg-gradient-to-tr',
+              'px-5 text-lg py-2 transition font-semibold rounded-sm bg-gradient-to-tr focus:outline-none focus:ring focus:ring-violet-300',
               pathname === item.href
                 ? 'text-main-1 dark:text-primary-2 from-primary-3 to-secondary-3 dark:bg-none'
-                : 'text-main-4 dark:text-main-1 hover:from-primary-2 to-secondary-2 hover:text-main-1 dark:hover:bg-none dark:hover:text-primary-1'
+                : 'text-main-4 dark:text-main-1 hover:bg-violet-600 hover:text-main-1 dark:hover:bg-none dark:hover:text-main-1'
             )}
           >
             {item.children}

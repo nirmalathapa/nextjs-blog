@@ -11,15 +11,15 @@ import { Blog } from 'next-starter-blog'
 
 const meta = {
   title: 'Blog',
-  description: `I've been writing online since 2020, mostly about data science, machine learning and tech careers. On purpose for documentation while able to share my knowledge. Use the search below to filter by title.`
+  description: ``
 }
 
 interface BlogPageProps {
-  latestPost: Array<Blog>
+  latestPost?: Array<Blog>
   allPost: Array<Blog>
 }
 
-const BlogPage: NextPage<BlogPageProps> = ({ latestPost = [], allPost = [] }) => {
+const BlogPage: NextPage<BlogPageProps> = ({ allPost = [] }) => {
   const { query, handleChange, filteredBlog } = useSearchBlogQuery(allPost)
 
   return (
@@ -28,8 +28,8 @@ const BlogPage: NextPage<BlogPageProps> = ({ latestPost = [], allPost = [] }) =>
 
       <Searchbar onChange={handleChange} value={query} placeholder='Search Posts..' />
 
-      {query.length === 0 && <BlogList blogs={latestPost} title='Latest Post' className='mb-20' layout='column' />}
-      {query.length === 0 && <BlogList blogs={allPost} title='All Post' layout='column' />}
+      {/* {query.length === 0 && <BlogList blogs={latestPost} title='Latest Post' className='mb-20' layout='column' />} */}
+      {query.length === 0 && <BlogList blogs={allPost} title='' layout='column' />}
 
       {query.length > 0 && filteredBlog.length > 0 ? (
         <BlogList blogs={filteredBlog} title='Search Result' layout='column' />

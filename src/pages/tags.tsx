@@ -16,10 +16,10 @@ const Tags: NextPage<TagsProps> = ({ tags = [], blogs = [] }) => {
 
   const getClassName = (tagType: string) => {
     const tagColor: Record<string, string> = {
-      hello: 'bg-primary-5 text-white',
-      cat: 'bg-red-500 text-white',
-      world: 'bg-sky-500 text-white',
-      foss: 'bg-fuchsia-500 text-white',
+      learning: 'bg-primary-5 text-white',
+      accessibility: 'bg-red-500 text-white',
+      design: 'bg-sky-500 text-white',
+      question: 'bg-fuchsia-500 text-white',
       unfeatured: 'bg-slate-700 text-white',
       cats: 'bg-pink-500 text-white'
     }
@@ -30,7 +30,7 @@ const Tags: NextPage<TagsProps> = ({ tags = [], blogs = [] }) => {
   const meta = {
     title: 'Tags',
     template: ownerName,
-    description: `Look for specific blog post based on your favorite blog tag.`,
+    description: `Blogs catagorized based on the tags.`,
     openGraph: {
       images: [
         {
@@ -58,7 +58,7 @@ const Tags: NextPage<TagsProps> = ({ tags = [], blogs = [] }) => {
     <Layout {...meta} as='main'>
       <Hero {...meta} />
       {tags.length > 0 && (
-        <section className={twclsx('flex flex-col', 'mt-4 gap-4')}>
+        <section className={twclsx('flex flex-col', 'mt-12 gap-4')}>
           <div className={twclsx('flex items-stretch flex-wrap', 'w-full', 'gap-2 mb-4 md:mb-8')}>
             {tags.map((tag) => (
               <button

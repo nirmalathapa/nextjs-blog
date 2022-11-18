@@ -1,4 +1,4 @@
-export type LocaleDateFormat = 'en-US' | 'id-ID' | 'en-GB' | 'es-ES' | 'in-IN'
+export type LocaleDateFormat = 'en-US' | 'id-ID' | 'en-GB' | 'es-ES' | 'in-IN' | 'da-DK'
 
 type DateFormat = (date: string, locale?: LocaleDateFormat, config?: Intl.DateTimeFormatOptions) => string
 
@@ -20,7 +20,7 @@ type DateFormat = (date: string, locale?: LocaleDateFormat, config?: Intl.DateTi
  * ```
  * @returns
  */
-export const dateFormat: DateFormat = (date, locale, config) => {
+export const dateFormat: DateFormat = (date, locale = 'da-DK', config) => {
   return new Intl.DateTimeFormat(locale ?? 'en-US', config ?? { dateStyle: 'medium' }).format(new Date(date))
 }
 

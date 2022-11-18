@@ -20,7 +20,7 @@ interface LayoutProps {
 const Layout: React.FunctionComponent<LayoutProps> = ({ children, as = 'div', ...props }) => {
   return React.createElement(
     as,
-    { className: 'layout mt-20' },
+    { className: 'layout mt-16' },
     <CustomSeo {...(props as unknown as CustomSeoProps)} />,
     children
   )
